@@ -1,0 +1,431 @@
+:root 
+{
+  --main-bg-color: rgb(12, 9, 31);
+  --second-bg-color: rgb(39, 35, 61);
+  --main-text-color: rgb(255, 255, 255);
+  --second-text-color: orangered;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body
+{
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar
+{
+  position: fixed;
+  background-color: var(--second-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 70px;
+  z-index: 1000;
+}
+
+#navbar>p
+{
+  font-size: 2rem;
+  color: var(--main-text-color);
+}
+
+#navbar >p span
+{
+  color: var(--second-text-color);
+}
+
+#navbar ul
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#navbar ul li
+{
+  margin-left: 2.5rem;
+}
+
+#navbar ul li a
+{
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+#navbar ul li a:hover
+{
+  color: var(--second-text-color);
+}
+
+#navbar ul li a#hire
+{
+  padding: 0.75rem;
+  border: 2px solid var(--second-text-color);
+  border-radius: 16px;
+}
+
+#navbar ul li a#hire:hover
+{
+  background-color: var(--second-text-color);
+  color: var(--main-text-color);
+}
+
+#check{
+  position: absolute;
+  display: none;
+  top: -1000%;
+}
+
+ .checkbtn
+ {
+  position: absolute;
+  align-self: center;
+  right: 40px;
+  width: 60px;
+  height: 40px;
+  display: none;
+ }
+
+ .bar-menu
+ {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+ }
+ .bar-menu .bar
+ {
+   background-color: var(--main-text-color);
+   position: relative;
+   width: 100%;
+   height: 7px;
+   border-radius: 100px;
+ }
+
+ .bar-menu:hover .bar
+ {
+   background-color: var(--second-text-color);
+ }
+
+ #welcome-section
+ {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+   min-height: 100vh;
+ }
+
+ #welcome-section .div-prez
+ {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 0 0 0 80px ;
+ }
+
+#welcome-section .div-prez>p
+{
+  font-size: 1rem;
+  font-weight: 100;
+  align-self: flex-start;
+  font-family: monospace;
+}
+
+#welcome-section .div-prez>h1
+{
+  padding: 0 0 0 2rem;
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+
+#welcome-section .div-prez>h1>span
+{
+  color: var(--second-text-color);
+  font-weight: 300;
+}
+
+#welcome-section .div-prez>h2
+{
+  margin-top: 10px;
+  padding: 0 0 0 2rem;
+  color: var(--main-text-color);
+  font-size: 1.945rem;
+  font-style: italic;
+}
+#welcome-section .div-prez a
+{
+  align-self: center;
+  margin: 100px;
+  text-decoration: none;
+  color: var(--main-text-color);
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  border: 2px solid var(--second-text-color);
+}
+
+#welcome-section .div-prez a:hover
+{
+  background-color: var(--second-text-color);
+}
+
+#profil
+{
+  width: 100%;
+  height: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 80px;
+}
+
+
+#profil #profil-img
+{
+  height: 100%;
+  margin-top: 150px;
+}
+
+#profil #profil-img img
+{
+  width: 300px;
+  height: 100%;
+}
+
+#profil #some-text
+{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+#profil #some-text p
+{
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+#profil #some-text header
+{
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+#profil #some-text header::after
+{
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: var(--second-text-color);
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+#profil #some-text p
+{
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#infos
+{
+  width: 100%;
+  display: table;
+  border: 2px solid var(--second-text-color);
+  font-weight: 200;
+  width: max-content;
+  padding: 20px;
+  margin: 2rem 0 0 0;
+}
+
+a
+{
+  color: rgb(0, 255, 21);
+}
+
+a:visited{
+  color: rgb(226, 40, 40);
+}
+
+#projects
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: var(--second-bg-color);
+}
+
+#projects label
+{
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+#projects label::after
+{
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: var(--second-text-color);
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+#projects #projects-list
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#projects #projects-list .project-tile
+{
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.project-tile a
+{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+
+.project-tile .title-project
+{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--main-text-color);
+  background: var(--main-bg-color);
+  padding: 1rem 0;
+}
+
+.project-tile:hover .title-project
+{
+  color: var(--second-text-color);
+}
+
+@media (max-width: 1100px) {
+  #profil
+  {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .checkbtn, #check{
+    display: block;
+  }
+
+  #navbar ul{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: calc(100vh - 130px);
+    background-color: var(--second-bg-color);
+    top: 128px;
+    left: 1000%;
+    transition: all 0.5s;
+  }
+  
+  #check:checked ~ ul{
+    left: 0;
+  }
+  
+  #navbar p 
+  {
+    align-self: flex-start;
+    margin: 0 0 0 60px;
+  }
+
+  #navbar ul li
+  {
+    font-size: 1.5em;
+  }
+
+  #welcome-section .div-prez>h1
+  {
+    font-size: 3.6rem;
+    font-weight: 400;
+  }
+
+  #welcome-section .div-prez>h2
+  {
+    font-size: 1.4rem;
+  }
+
+  #profil
+  {
+    flex-direction: column;
+  }
+
+  #profil-img
+  {
+    align-self: center;
+  }
+
+  #profil #some-text
+  {
+    align-self: center;
+    width: 100%;
+    font-size: 1rem;
+
+    margin-left: 0px;
+  }
+  #profil #some-text p#description
+  {
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+  }
+
+  table tr td:nth-child(2)
+  {
+    padding: 0 0 0 70px ;
+  }
+}
